@@ -1,0 +1,60 @@
+body {
+    background-color: #101010;
+}
+
+.navigation {
+    position: relative;
+    margin-top: 4rem;
+    margin-left: 21.5625rem;
+    font-family: Work Sans;
+}
+
+
+.navigation a {
+    position: relative;
+    color: #FFF;
+    font-family: Work Sans;
+    font-size: 1.125rem;
+    font-style: normal;
+    text-decoration-line: none;
+    margin-right: 3.125rem;
+}
+
+.navigation__contact {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    margin-left: 12.375rem;
+    border-radius: 0.3125rem;
+    background: #F50103;
+    color: #FFF;
+    font-size: 1.125rem;
+}
+
+#navigation__selected{
+    position: relative;
+    color:#F55529;
+    text-decoration-line: underline;
+}
+
+
+.navigation::marker{
+    content:"";
+}
+
+.navigation__logo {
+    color: #0F0D1C;
+    font-size: 1.5rem;
+    margin-right: 11.1875rem;
+}
+
+.navigation::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: transparent url('/css/images/navigation/logo.svg') no-repeat;
+}
