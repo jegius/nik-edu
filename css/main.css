@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Work+Sans:wght@400;500&display=swap');
+
 body {
     background-color: #101010;
 }
@@ -5,36 +7,41 @@ body {
 .navigation {
     position: relative;
     margin-top: 4rem;
-    margin-left: 21.5625rem;
-    font-family: Work Sans;
+    margin-left: 18%;
+    margin-bottom: 5%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
 }
 
 
-.navigation a {
+.navigation_no-selected{
     position: relative;
     color: #FFF;
-    font-family: Work Sans;
-    font-size: 1.125rem;
     font-style: normal;
     text-decoration-line: none;
-    margin-right: 3.125rem;
+    margin-right: 2rem;
 }
 
 .navigation__contact {
     position: relative;
     display: inline-block;
     padding: 0.5rem 1.25rem;
-    margin-left: 12.375rem;
+    margin-left: 11rem;
     border-radius: 0.3125rem;
     background: #F50103;
     color: #FFF;
-    font-size: 1.125rem;
+    text-decoration-line: none;
 }
 
-#navigation__selected{
+.navigation_selected{
     position: relative;
     color:#F55529;
     text-decoration-line: underline;
+    font-style: normal;
+    margin-right: 2rem;
 }
 
 
@@ -45,16 +52,80 @@ body {
 .navigation__logo {
     color: #0F0D1C;
     font-size: 1.5rem;
-    margin-right: 11.1875rem;
+    margin-right: 11rem;
 }
 
 .navigation::before{
     display: block;
     content: "";
     position: absolute;
-    top: 0;
+    top: 0.35rem;
     left: -2.25rem;
     width: 1.75rem;
     height: 1.75rem;
     background: transparent url('/css/images/navigation/logo.svg') no-repeat;
+}
+
+.information {
+    position: relative;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    color: #FFF;
+    margin-left: 17%;
+}
+
+.information__elem1 {
+    position: relative;
+    display: inline-block;
+    width: 622px;
+    height: 318px;
+    font-size: 74px;
+    font-weight: 800;
+    line-height: 140%;
+}
+
+.information__elem1 span {
+    color: #F50103
+}
+
+.information__elem2 {
+    position: relative;
+    width: 664px;
+    height: 66px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 160%;
+    margin-top: -4%;
+}
+
+.information__elem3 {
+    position: relative;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 20px 45px;
+    border-radius: 5px;
+    background: #F50103;
+    color: #FFF;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 160%;
+    text-decoration-line: none;
+}
+
+.information__circle {
+    display: inline-block;
+    position: absolute;
+    margin-left: 48%;
+    margin-top: 5rem;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+}
+
+.information__circle img {
+    width: 661px;
+    height: 867px;
+    margin-top: -8rem;
+    margin-left: 2rem;
 }
