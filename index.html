@@ -8,17 +8,17 @@
 </head>
 <body>
     <header>
-        <li class="navigation">
+        <ul class="navigation">
             <dev class="navigation__logo">Warkinon</dev>
-            <a href="#" class="navigation_selected">Home</a>
-            <a href="#" class="navigation_no-selected">Case Studies</a>
-            <a href="#" class="navigation_no-selected">Blog</a>
-            <a href="#" class="navigation_no-selected">Services</a>
-            <a href="#" class="navigation_no-selected">Contact</a>
-            <a href="#" class="navigation__contact">Contact</a>
-        </li>
+            <li class="navigation__item navigation__item_selected"><a href="#">Home</a></li>
+            <li class="navigation__item"><a href="#">Case Studies</a></li>
+            <li class="navigation__item"><a href="#">Blog</a></li>
+            <li class="navigation__item"><a href="#">Services</a></li>
+            <li class="navigation__item"><a href="#">Contact</a></li>
+            <li class="navigation__contact _active"><a href="#">Contact</a></li>
+        </ul>
     </header>
-    <div class="information">
+    <section class="information">
         <div class="information__elem1">
             <p class="information__elem1 information_large">
                 I am <span>William</span> a UX Designer from the Bronx
@@ -27,16 +27,171 @@
                 Hi, my name is Alex Smith and I love creating unique intefaces using code. 
                 Pixel perfect every time just try me out.
             </p>
+            <div class="information__elem2 _active">
+                <a href='#'>
+                    <p>- My Works</p>
+                </a>
+            </div>
         </div>
         <form class="information__circle">
             <div class="information__face"></div>
         </form>
-    </div>
-    <div class="social-links">
+    </section>
+    <section class="social-links">
         <a href="#">Facebook</a>
         <a href="#">Twitter</a>
         <a href="#">Google Plus</a>
         <a href="#">Linkedin</a>
+    </section>
+    <section class="my-services">
+        <h1>My Services</h1>
+        <h2>Why hire me for your next project</h2>
+        <div class="my-services__info">
+            <div class="my-services__block my-services_active">
+                <div class="my-services_photo-blog"></div>
+                <h4>Blog article</h4>
+                <p>
+                    Mauris vel quam nunc. 
+                    Quisque tempor tempus aliquet. 
+                    Donec egestas odio et tempor.
+                </p>
+            </div>
+            <div class="my-services__block my-services_active">
+                <div class="my-services_photo-seo"></div>
+                <h4>SEO strategy</h4>
+                <p>
+                    Mauris vel quam nunc. 
+                    Quisque tempor tempus aliquet. 
+                    Donec egestas odio et tempor.
+                </p>
+            </div>
+            <div class="my-services__block my-services_active">
+                <div class="my-services_photo-conarch"></div>
+                <h4>Content architecture</h4>
+                <p>
+                    Mauris vel quam nunc. 
+                    Quisque tempor tempus aliquet. 
+                    Donec egestas odio et tempor.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <ol class="services__list">
+            <li class="services__list-elem">
+                <div class="services__block">
+                    <div class="services__line"></div>
+                    <div class="services__buttom">
+                        <div class="arrow">
+                            <div class="base-arrow"></div>
+                        </div>
+                    </div>
+                    <p>UI/UX Design</p>
+                    <ul>
+                        <li>Web Design</li>
+                        <li>App Design</li>
+                        <li>Dashboard Design</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="services__list-elem">
+                <div class="services__block">
+                    <div class="services__line"></div>
+                    <div class="services__buttom">
+                        <div class="arrow">
+                            <div class="base-arrow"></div>
+                        </div>
+                    </div>
+                    <p>Development</p>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>App Development</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="services__list-elem">
+                <div class="services__block">
+                    <div class="services__line"></div>
+                    <div class="services__buttom">
+                        <div class="arrow">
+                            <div class="base-arrow"></div>
+                        </div>
+                    </div>
+                    <p>Branding</p>
+                    <ul>
+                        <li>Brand Logo</li>
+                        <li>Brand Promotion</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+        <div class="services__info">
+            <div class="services__info-h1">
+                Solving problems by the services
+            </div>
+            <p>
+                I seek to push the limits of creativity to create
+                high-engaging, user-friendly, and memorable
+                interactive experiences.
+            </p>
+            <div class="services__info-buttom _active">
+                <a href="#">Learn more</a>
+                <div class="info-arrow"></div>
+            </div>
+        </div>
+    </section>
+    <div class="portfolio">
+        <h1>Let's have a look at my porfolio</h1>
+        <p>
+            I seek to push the limits of creativity to create high-engaging,
+            user-friendly, and memorable interactive experiences.
+        </p>
+        <div class="portfolio__photos">
+            <img src="/css/images/portfolio/work-1.png">
+            <img src="/css/images/portfolio/work-2.png">
+            <img src="/css/images/portfolio/work-3.png">
+            <img src="/css/images/portfolio/work-4.png">
+            <img src="/css/images/portfolio/work-5.png">
+            <img src="/css/images/portfolio/work-6.png">
+        </div>
+        <a href="#" class="portfolio__buttom _active">View More</a>
     </div>
+    <section class="people-say">
+        <h1>What People Say</h1>
+        <h4>
+            Welcome to our gym & fitness training centre. 
+            Sore today, strong tomorrow. 
+            Improve your fitness today.
+        </h4>
+        <div class="people-say__quotebox">
+            <div class="people-say__quote">
+                <p class="people-say__quote-box">
+                    I have been taking gym and fitness training here since 
+                    a long time and I found here so much easy, comfort and flexibility. 
+                    The mentors are so good and they train me very well.
+                </p>
+                <div class="people-say__quote-member">
+                    <div class="people-say__quote_stokes"></div>
+                    <p class="people-say__quote_author">Ben Stokes <span>member</span></p>
+                </div>
+            </div>
+            <div class="people-say__quote">
+                <p class="people-say__quote-box">
+                    I have been taking gym and fitness training here since 
+                    a long time and I found here so much easy, comfort and flexibility. 
+                    The mentors are so good and they train me very well.
+                </p>
+                <div class="people-say__quote-member">
+                    <div class="people-say__quote_fokes"></div>
+                    <p class="people-say__quote_author">Ben Fokes <span>member</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="people-say__selectors">
+            <div class="people-say__selector people-say__selector_active"></div>
+            <div class="people-say__selector"></div>
+            <div class="people-say__selector"></div>
+        </div>
+    </section>
 </body>
 </html>
