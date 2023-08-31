@@ -128,13 +128,13 @@ body {
     font-style: normal;
     font-family: "Lato", sans-serif;
     flex-shrink: 0;
-    margin-left: 10rem;
 }
 
 .information__elem1{
     position: relative;
     display: block;
     color:var(--white);
+    margin-left:5rem;
 }
 
 .information_large{ 
@@ -166,6 +166,7 @@ body {
     height: 5.875rem;
     border-radius: 0.3125rem;
     background: var(--red);
+    margin-left: 5rem;
 }
 
 .information__elem2 a{
@@ -212,7 +213,6 @@ body {
     background-color:var(--red);
     width: 100%;
     padding: 4rem 0;
-    margin: 0
 }
 
 .social-links a{
