@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Gelasio:wght@600&family=Inter&family=Lato:wght@400;900&family=Work+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Gelasio:wght@600&family=Inter&family=Lato:wght@400;900&family=Open+Sans:wght@300&family=Work+Sans:wght@400;500&display=swap');
 
 :root{
     --white: #FFF;
@@ -19,11 +19,19 @@
     --black-eye:#1D2027;
     --white-dice:#D6D6D7;
     --white-post:#C9CACD;
+    --white-clients:#F1F1F1;
+    --white-footer:#FEFEFE;
+    --white-input-border:#E2E2E2;
 }
 
 a {
     color: inherit;
     text-decoration-line: none;
+}
+
+input{
+    color: inherit;
+    border-radius: 0px;
 }
 
 html{
@@ -108,7 +116,7 @@ body {
     left: -2%;
     width: 1.75rem;
     height: 1.75rem;
-    background: transparent url('/css/images/navigation/logo.svg') no-repeat;
+    background: transparent url('/css/images/logo.svg') no-repeat;
 }
 
 .information{
@@ -176,21 +184,6 @@ body {
     line-height: 94px;
     text-align: center;
     vertical-align: bottom;
-}
-
-
-.navigation::marker{
-    content:"";
-}
-
-.navigation::before{
-    display: block;
-    content: "";
-    position: absolute;
-    left: -2%;
-    width: 1.75rem;
-    height: 1.75rem;
-    background: transparent url('/css/images/navigation/logo.svg') no-repeat;
 }
 
 .information{
@@ -561,7 +554,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 73.125rem;
+    width: 66%;
 }
 
 .portfolio__photos img{
@@ -709,4 +702,153 @@ body {
 
 .people-say__selector:hover{
     border-color: var(--orange);
+}
+
+.clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8.4375rem;
+    background: var(--black-eye);
+    width: 100%;
+    padding: 2rem 0;
+    gap: 100px;
+}
+
+.clients p{
+    width: 24.4375rem;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.clients p span{
+    color: var(--white-clients);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.clients__img{
+    width: 9.5rem;
+    height: 3.5625rem;
+}
+
+.clients_logo-1{
+    background: url('/css/images/clients/client-1.png') no-repeat;
+}
+
+.clients_logo-2{
+    background: url('/css/images/clients/client-2.png') no-repeat;
+}
+
+.clients_logo-3{
+    background: url('/css/images/clients/client-3.png') no-repeat;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 6.25rem;
+    margin-bottom: 8.75rem;
+    gap: 200px;
+}
+
+.footer__box{
+    display: flex;
+    color: var(--white);
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    gap: 1.5rem;
+}
+
+.footer__box p{
+    width: 24.3125rem;
+    font-size: 18px;
+    color: var(--white-footer);
+}
+
+.footer__box h4{
+    flex-wrap: nowrap;
+    font-size: 24px;
+    margin: 10px 10px;
+}
+
+.footer__box input{
+    background-color: var(--almost-black);
+    border: 1px solid var(--white-input-border);
+    font-size: 22px;
+    padding: 1rem 1.5rem;
+}
+
+.footer__social{
+    display: inline;
+    padding: 0.6rem;
+    margin: 0;
+}
+
+.footer__social li{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 0.8rem;
+}
+
+.footer__social_facebook{
+    width: 36px;
+    height: 36px;
+    background: url('/css/images/footer/social/facebook.svg') no-repeat;
+    background-size: 36px 36px;
+}
+
+.footer__social_twitter{
+    width: 36px;
+    height: 36px;
+    background: url('/css/images/footer/social/twitter.svg') no-repeat;
+    background-size: 36px 36px;
+}
+
+.footer__social_instagram{
+    width: 36px;
+    height: 36px;
+    background: url('/css/images/footer/social/instagram.svg') no-repeat;
+    background-size: 36px 36px;
+}
+
+.footer__social_linked-in{
+    width: 36px;
+    height: 36px;
+    background: url('/css/images/footer/social/linked-in.svg') no-repeat;
+    background-size: 36px 36px;
+}
+
+.footer__social_vimeo{
+    width: 36px;
+    height: 36px;
+    background: url('/css/images/footer/social/vimeo.svg') no-repeat;
+    background-size: 36px 36px;
+}
+
+
+.logo{
+    width: 2.75rem;
+    height: 2.75rem;
+    content: "";
+    background: url('/css/images/logo.svg'), no-repeat;
+    background-size: 2.75rem 2.75rem;
+}
+
+._down{
+    gap:0px
 }
