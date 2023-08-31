@@ -31,7 +31,7 @@ a {
 
 input{
     color: inherit;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 html{
@@ -47,9 +47,9 @@ body {
 }
 
 ._active:hover{
-    box-shadow: var(--orange) 0 0 5px 3px;
+    box-shadow: var(--orange) 0 0 0.3125rem 0.1875rem;
     background: var(--black);
-    text-shadow: var(--orange) 1px 0px 25px;
+    text-shadow: var(--orange) 0.0625rem 0rem 1.5625rem;
     color: var(--orange);
 }
 
@@ -57,45 +57,43 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 4rem;
-    margin-left: 19.8%;
-    margin-right: 20.5%;
-    justify-content: space-between;
+    justify-content: center;
     white-space: nowrap;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+    margin-top: 4rem;
 }
 
 .navigation__logo {
     color: var(--logo-color);
-    margin-right: 15%;
     font-size: 24px;
+    margin-right: 11.1875rem;
 }
 
 .navigation li{
     list-style-type: none;
+    margin-left: 3.125rem;
 }
 
 .navigation__item{
-    margin-right: 3.5%;
     color: var(--white);
 }
 
 .navigation__item_selected{
     color: var(--orange);
     text-decoration-line: underline;
-    margin-right: 3.5%;
 }
 
 .navigation li:hover{
     color: var(--orange);
-    text-shadow: var(--orange) 1px 0px 10px;
+    text-shadow: var(--orange) 0.0625rem 0rem 0.625rem;
 }
 
 .navigation__contact {
     padding: 0.5rem 1.25rem;
-    margin-left: 18%;
+    margin-left: 12.5rem;
+    margin-right: 12.5rem;
     border-radius: 0.3125rem;
     font-size: 16px;
     background: var(--red);
@@ -109,22 +107,20 @@ body {
     content:"";
 }
 
-.navigation::before{
-    display: block;
-    content: "";
+.navigation__logo::before{
     position: absolute;
-    left: -2%;
+    content: "";
     width: 1.75rem;
     height: 1.75rem;
-    background: transparent url('/css/images/logo.svg') no-repeat;
+    background: url('/css/images/logo.svg') no-repeat;
 }
 
 .information{
     margin-top: 5.9375rem;
+    margin-left: 9.375rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 14%;
     font-style: normal;
     font-family: "Lato", sans-serif;
     flex-shrink: 0;
@@ -170,12 +166,7 @@ body {
 .information__elem2 a{
     width: 16.875rem;
     height: 5.875rem;
-    text-decoration-line:none;
-}
-
-.information__elem2 a p{
-    width: 16.875rem;
-    height: 5.875rem;
+    padding-left: 2.2rem;
     color:var(--white);
     font-family: 'Leto', sans-serif;
     font-size: 34px;
@@ -183,28 +174,12 @@ body {
     font-weight: 800;
     line-height: 94px;
     text-align: center;
-    vertical-align: bottom;
 }
 
-.information{
-    margin-top: 5.9375rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-left: 14%;
-    font-style: normal;
-    font-family: "Lato", sans-serif;
-    flex-shrink: 0;
-}
-
-.break{
-    flex-basis: 100%;
-    height: 0;
-}
 
 .information__circle{
     position: relative;
-    margin-left: 3.4%;
+    margin-left: 3.125rem;
     margin-top: 6.5rem;
     margin-bottom: 4.6875rem;
     width: 40.5rem;
@@ -215,7 +190,7 @@ body {
 
 .information__face{
     margin-top: -9rem;
-    margin-left: 5%;
+    margin-left: 2rem;
     width: 41.3125rem;
     height: 54.1875rem;
     background: url('/css/images/information/face.png');
@@ -359,7 +334,7 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 22px;
     font-weight: 700;
-    gap: 120px
+    gap: 7.5rem
 }
 
 .services__list-elem{    
@@ -390,10 +365,10 @@ body {
     gap: 1.75rem;
 }
 
-.services__block p{
-    font-size: 2rem;
-    margin-top: -1.25rem;
-    margin-left: 0.625rem;
+.services__block h4{
+    font-size: 32px;
+    margin-top: -1.2rem;
+    margin-left: 0.7rem;
 }
 
 .services__line{
@@ -453,8 +428,8 @@ body {
 .arrow{
     width: 0.4375rem; 
     height: 0.4375rem;
-    border-top: 1.5px solid var(--white);
-    border-right: 1.5px solid var(--white);
+    border-top: 0.0938rem solid var(--white);
+    border-right: 0.0938rem solid var(--white);
     margin-top: 1.0625rem;
     margin-left: 1.125rem;
 }
@@ -513,11 +488,11 @@ body {
 
 
 .info-arrow{
-    width: 24px;
-    height: 15px;
+    width: 1.5rem;
+    height: 0.9375rem;
     
     background: transparent url('/css/images/services/vector.svg');
-    background-size: 24px 15px;
+    background-size: 1.5rem 0.9375rem;
 }
 
 .portfolio{
@@ -587,7 +562,7 @@ body {
     margin-top: 6.25rem;
 }
 
-.people-say h1{
+.people-say__what{
     color: var(--white);
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -597,7 +572,7 @@ body {
     line-height: 71.5px;
 }
 
-.people-say h4{
+.people-say__gym{
     width: 32.625rem;
     color: var(--white-gray);
     text-align: center;
@@ -650,6 +625,7 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-top: 1.4375rem;
 }
 
 .people-say__quote_author span{
@@ -760,7 +736,7 @@ body {
     width: 100%;
     margin-top: 6.25rem;
     margin-bottom: 8.75rem;
-    gap: 200px;
+    gap: 12.5rem;
 }
 
 .footer__box{
@@ -783,7 +759,7 @@ body {
 .footer__box h4{
     flex-wrap: nowrap;
     font-size: 24px;
-    margin: 10px 10px;
+    margin: 0.625rem 0.625rem;
 }
 
 .footer__box input{
@@ -806,38 +782,38 @@ body {
 }
 
 .footer__social_facebook{
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: url('/css/images/footer/social/facebook.svg') no-repeat;
-    background-size: 36px 36px;
+    background-size: 2.25rem 2.25rem;
 }
 
 .footer__social_twitter{
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: url('/css/images/footer/social/twitter.svg') no-repeat;
-    background-size: 36px 36px;
+    background-size: 2.25rem 2.25rem;
 }
 
 .footer__social_instagram{
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: url('/css/images/footer/social/instagram.svg') no-repeat;
-    background-size: 36px 36px;
+    background-size: 2.25rem 2.25rem;
 }
 
 .footer__social_linked-in{
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: url('/css/images/footer/social/linked-in.svg') no-repeat;
-    background-size: 36px 36px;
+    background-size: 2.25rem 2.25rem;
 }
 
 .footer__social_vimeo{
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: url('/css/images/footer/social/vimeo.svg') no-repeat;
-    background-size: 36px 36px;
+    background-size: 2.25rem 2.25rem;
 }
 
 
@@ -850,5 +826,5 @@ body {
 }
 
 ._down{
-    gap:0px
+    gap:0
 }
