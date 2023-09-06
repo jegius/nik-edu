@@ -1,231 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <ul class="navigation">
-            <li class="navigation__logo">Warkinon</li>
-            <li class="navigation__item navigation__item_selected"><a href="#">Home</a></li>
-            <li class="navigation__item"><a href="#">Case Studies</a></li>
-            <li class="navigation__item"><a href="#">Blog</a></li>
-            <li class="navigation__item"><a href="#">Services</a></li>
-            <li class="navigation__item"><a href="#">Contact</a></li>
-            <div class="navigation__contact _active"><a href="#">Contact</a></div>
-        </ul>
+      <div class="navigation__logo">Warkinon</div>
+      <ul class="navigation">
+        <li class="navigation__item navigation__item_selected">
+          <a href="#">Home</a>
+        </li>
+        <li class="navigation__item"><a href="#">Case Studies</a></li>
+        <li class="navigation__item"><a href="#">Blog</a></li>
+        <li class="navigation__item"><a href="#">Services</a></li>
+        <li class="navigation__item"><a href="#">Contact</a></li>
+      </ul>
+      <input
+        class="navigation__contact-button _active"
+        type="button"
+        value="contact"
+      />
     </header>
     <section class="information">
-        <div class="information__elem1">
-            <h2 class="information__elem1 information_large">
-                I am <span>William</span> a UX Designer from the Bronx
-            </h2>
-            <p class="information__elem1 information_small">
-                Hi, my name is Alex Smith and I love creating unique intefaces using code. 
-                Pixel perfect every time just try me out.
-            </p>
-            <div class="information__elem2 _active">
-                <a href='#'>- My Works</a>
-            </div>
-        </div>
-        <form class="information__circle">
-            <div class="information__face"></div>
-        </form>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Google Plus</a>
-            <a href="#">Linkedin</a>
-        </div>
+      <div class="information__elem1">
+        <h2>I am <span>William</span> a UX Designer from the Bronx</h2>
+        <p>
+          Hi, my name is Alex Smith and I love creating unique intefaces using
+          code. Pixel perfect every time just try me out.
+        </p>
+        <input class="information__button _active" type="button" value="- my works">
+      </div>
+      <form class="information__circle">
+        <div class="information__face"></div>
+      </form>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Google Plus</a></li>
+        <li><a href="#">Linkedin</a></li>
+      </ul>
     </section>
     <section class="my-services">
-        <h1>My Services</h1>
-        <h2>Why hire me for your next project</h2>
-        <div class="my-services__info">
-            <div class="my-services__block my-services_active">
-                <div class="my-services_photo-blog"></div>
-                <h4>Blog article</h4>
-                <p>
-                    Mauris vel quam nunc. 
-                    Quisque tempor tempus aliquet. 
-                    Donec egestas odio et tempor.
-                </p>
-            </div>
-            <div class="my-services__block my-services_active">
-                <div class="my-services_photo-seo"></div>
-                <h4>SEO strategy</h4>
-                <p>
-                    Mauris vel quam nunc. 
-                    Quisque tempor tempus aliquet. 
-                    Donec egestas odio et tempor.
-                </p>
-            </div>
-            <div class="my-services__block my-services_active">
-                <div class="my-services_photo-conarch"></div>
-                <h4>Content architecture</h4>
-                <p>
-                    Mauris vel quam nunc. 
-                    Quisque tempor tempus aliquet. 
-                    Donec egestas odio et tempor.
-                </p>
-            </div>
+      <h1>My Services</h1>
+      <h2 class="text_large">Why hire me for your next project</h2>
+      <div class="my-services__info">
+        <div class="my-services__block my-services_active">
+          <div class="my-services_photo-blog"></div>
+          <h4>Blog article</h4>
+          <p class="text_normal">
+            Mauris vel quam nunc. Quisque tempor tempus aliquet. Donec egestas
+            odio et tempor.
+          </p>
         </div>
+        <div class="my-services__block my-services_active">
+          <div class="my-services_photo-seo"></div>
+          <h4>SEO strategy</h4>
+          <p class="text_normal">
+            Mauris vel quam nunc. Quisque tempor tempus aliquet. Donec egestas
+            odio et tempor.
+          </p>
+        </div>
+        <div class="my-services__block my-services_active">
+          <div class="my-services_photo-conarch"></div>
+          <h4>Content architecture</h4>
+          <p class="text_normal">
+            Mauris vel quam nunc. Quisque tempor tempus aliquet. Donec egestas
+            odio et tempor.
+          </p>
+        </div>
+      </div>
     </section>
     <section class="services">
-        <ol class="services__list">
-            <li class="services__list-elem">
-                <div class="services__block">
-                    <div class="services__line"></div>
-                    <div class="services__buttom">
-                        <div class="arrow">
-                            <div class="base-arrow"></div>
-                        </div>
-                    </div>
-                    <h4>UI/UX Design</h4>
-                    <ul>
-                        <li>Web Design</li>
-                        <li>App Design</li>
-                        <li>Dashboard Design</li>
-                    </ul>
-                </div>
-            </li>
-            <li class="services__list-elem">
-                <div class="services__block">
-                    <div class="services__line"></div>
-                    <div class="services__buttom">
-                        <div class="arrow">
-                            <div class="base-arrow"></div>
-                        </div>
-                    </div>
-                    <h4>Development</h4>
-                    <ul>
-                        <li>Web Development</li>
-                        <li>App Development</li>
-                    </ul>
-                </div>
-            </li>
-            <li class="services__list-elem">
-                <div class="services__block">
-                    <div class="services__line"></div>
-                    <div class="services__buttom">
-                        <div class="arrow">
-                            <div class="base-arrow"></div>
-                        </div>
-                    </div>
-                    <h4>Branding</h4>
-                    <ul>
-                        <li>Brand Logo</li>
-                        <li>Brand Promotion</li>
-                    </ul>
-                </div>
-            </li>
-        </ol>
-        <div class="services__info">
-            <h1 class="services__info-h1">
-                Solving problems by the services
-            </h1>
-            <p>
-                I seek to push the limits of creativity to create
-                high-engaging, user-friendly, and memorable
-                interactive experiences.
-            </p>
-            <div class="services__info-buttom _active">
-                <a href="#">Learn more</a>
-                <div class="info-arrow"></div>
+      <ol class="services__list">
+        <li class="services__list-elem">
+          <div class="services__block">
+            <div class="services__head">
+            <div class="services__line"></div>
+              <div class="services__button _active">
+                <div class="arrow"></div>
+                <div class="base-arrow"></div>
+              </div>
             </div>
-        </div>
+            <h4>UI/UX Design</h4>
+            <ul>
+              <li class="text_normal">Web Design</li>
+              <li class="text_normal">App Design</li>
+              <li class="text_normal">Dashboard Design</li>
+            </ul>
+          </div>
+        </li>
+        <li class="services__list-elem">
+          <div class="services__block">
+            <div class="services__head">
+                <div class="services__line"></div>
+                <div class="services__button _active">
+                 <div class="arrow"></div>
+                 <div class="base-arrow"></div>
+                </div>
+            </div>
+            <h4>Development</h4>
+            <ul>
+              <li class="text_normal">Web Development</li>
+              <li class="text_normal">App Development</li>
+            </ul>
+          </div>
+        </li>
+        <li class="services__list-elem">
+            <div class="services__block">
+              <div class="services__head">
+                <div class="services__line"></div>
+                  <div class="services__button _active">
+                      <div class="arrow"></div>
+                      <div class="base-arrow"></div>
+                </div>
+              </div>
+            <h4>Branding</h4>
+            <ul>
+              <li class="text_normal">Brand Logo</li>
+              <li class="text_normal">Brand Promotion</li>
+            </ul>
+        </li>
+      </ol>
+      <div class="services__info">
+        <h1 class="text_large">Solving problems by the services</h1>
+        <p class="text_normal">
+          I seek to push the limits of creativity to create high-engaging,
+          user-friendly, and memorable interactive experiences.
+        </p>
+        <input class="services__info-button _active" type="button" value="Learn more →"> 
+      </div>
     </section>
     <section class="portfolio">
-        <h1>Let's have a look at my porfolio</h1>
-        <p>
-            I seek to push the limits of creativity to create high-engaging,
-            user-friendly, and memorable interactive experiences.
-        </p>
-        <div class="portfolio__photos">
-            <img src="/css/images/portfolio/work-1.png">
-            <img src="/css/images/portfolio/work-2.png">
-            <img src="/css/images/portfolio/work-3.png">
-            <img src="/css/images/portfolio/work-4.png">
-            <img src="/css/images/portfolio/work-5.png">
-            <img src="/css/images/portfolio/work-6.png">
-        </div>
-        <a href="#" class="portfolio__buttom _active">View More</a>
+      <h1 class="text_large">Let's have a look at my porfolio</h1>
+      <p class="text_normal">
+        I seek to push the limits of creativity to create high-engaging,
+        user-friendly, and memorable interactive experiences.
+      </p>
+      <div class="portfolio__photos">
+        <img src="/css/images/portfolio/work-1.png" />
+        <img src="/css/images/portfolio/work-2.png" />
+        <img src="/css/images/portfolio/work-3.png" />
+        <img src="/css/images/portfolio/work-4.png" />
+        <img src="/css/images/portfolio/work-5.png" />
+        <img src="/css/images/portfolio/work-6.png" />
+      </div>
+      <input class="portfolio__button _active" type="button" value="view more">
     </section>
     <section class="people-say">
-        <p class="people-say__what">What People Say</p>
-        <p class="people-say__gym">
-            Welcome to our gym & fitness training centre. 
-            Sore today, strong tomorrow. 
-            Improve your fitness today.
-        </p>
-        <div class="people-say__quoteblock">
-            <div class="people-say__quote">
-                <p class="people-say__quote-box">
-                    I have been taking gym and fitness training here since 
-                    a long time and I found here so much easy, comfort and flexibility. 
-                    The mentors are so good and they train me very well.
-                </p>
-                <div class="people-say__quote-member">
-                    <div class="people-say__quote_stokes"></div>
-                    <span class="people-say__quote_author">Ben Stokes <span>member</span></span>
-                </div>
-            </div>
-            <div class="people-say__quote">
-                <p class="people-say__quote-box">
-                    I have been taking gym and fitness training here since 
-                    a long time and I found here so much easy, comfort and flexibility. 
-                    The mentors are so good and they train me very well.
-                </p>
-                <div class="people-say__quote-member">
-                    <div class="people-say__quote_fokes"></div>
-                    <span class="people-say__quote_author">Ben Fokes <span>member</span></span>
-                </div>
-            </div>
+      <h1 class="text_large">What People Say</h1>
+      <p class="text_normal people-say__gym">
+        Welcome to our gym & fitness training centre. Sore today, strong
+        tomorrow. Improve your fitness today.
+      </p>
+      <div class="people-say__quoteblock">
+        <div class="people-say__quote">
+          <p class="people-say__quote-box">
+            I have been taking gym and fitness training here since a long time
+            and I found here so much easy, comfort and flexibility. The mentors
+            are so good and they train me very well.
+          </p>
+          <div class="people-say__quote-member">
+            <div class="people-say__quote_stokes"></div>
+            <span class="people-say__quote_author"
+              >Ben Stokes <span>member</span></span>
+          </div>
         </div>
-        <div class="people-say__selectors">
-            <div class="people-say__selector people-say__selector_active"></div>
-            <div class="people-say__selector"></div>
-            <div class="people-say__selector"></div>
+        <div class="people-say__quote">
+          <p class="people-say__quote-box">
+            I have been taking gym and fitness training here since a long time
+            and I found here so much easy, comfort and flexibility. The mentors
+            are so good and they train me very well.
+          </p>
+          <div class="people-say__quote-member">
+            <div class="people-say__quote_fokes"></div>
+            <span class="people-say__quote_author"
+              >Ben Fokes <span>member</span></span
+            >
+          </div>
         </div>
+      </div>
+      <div class="people-say__selectors">
+        <div class="people-say__selector people-say__selector_active"></div>
+        <div class="people-say__selector"></div>
+        <div class="people-say__selector"></div>
+      </div>
     </section>
     <section class="clients">
-        <div class="_flexbox">    
-            <span>Our Trusted Client</span>
-            <p>
-                Proin eget tortor risus cras ultricies 
-                ligula sed portavamus suscipit tortor
-            </p>
-        </div>
-        <div class="clients__img clients_logo-1"></div>
-        <div class="clients__img clients_logo-2"></div>
-        <div class="clients__img clients_logo-3"></div>
+      <div class="_flexbox">
+        <span>Our Trusted Client</span>
+        <p class="text_normal">
+          Proin eget tortor risus cras ultricies ligula sed portavamus suscipit
+          tortor
+        </p>
+      </div>
+      <div class="clients__img clients_logo-1"></div>
+      <div class="clients__img clients_logo-2"></div>
+      <div class="clients__img clients_logo-3"></div>
     </section>
     <section class="footer">
-        <div class="footer__box">
-            <div class="logo"></div>
-            <p>
-                There are many variations of 
-                passages of Lorem Ipsum available, 
-                but the majority have suffere
-            </p>
-        </div>
-        <div class="footer__box">
-            <h4>Newsletter</h4>
-            <input type="email" value="Submit your email...."/>
-        </div>
-        <div class="footer__box _down">
-            <h4>Follow Me</h4>
-            <ul class="footer__social">
-                <li><a href="#" class="footer__social_facebook"></a></li>
-                <li><a href="#" class="footer__social_twitter"></a></li>
-                <li><a href="#" class="footer__social_instagram"></a></li>
-                <li><a href="#" class="footer__social_linked-in"></a></li>
-                <li><a href="#" class="footer__social_vimeo"></a></li>
-            </ul>
-        </div>
+      <div class="footer__box">
+        <div class="logo"></div>
+        <p>
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffere
+        </p>
+      </div>
+      <div class="footer__box">
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Submit your email...." />
+      </div>
+      <div class="footer__box _down">
+        <h4>Follow Me</h4>
+        <ul class="footer__social">
+          <li><a href="#" class="footer__social_facebook"></a></li>
+          <li><a href="#" class="footer__social_twitter"></a></li>
+          <li><a href="#" class="footer__social_instagram"></a></li>
+          <li><a href="#" class="footer__social_linked-in"></a></li>
+          <li><a href="#" class="footer__social_vimeo"></a></li>
+        </ul>
+      </div>
     </section>
-</body>
+  </body>
 </html>
