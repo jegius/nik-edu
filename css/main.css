@@ -23,6 +23,24 @@
   --white-footer: #fefefe;
   --white-input-border: #e2e2e2;
   --graphite-black: #1c1c1c;
+  --face: url("/images/information/face.png");
+  --logo: url("/images/logo.svg");
+  --client-1: url("/images/clients/client-1.png");
+  --client-2: url("/images/clients/client-2.png");
+  --client-3: url("/images/clients/client-3.png");
+  --facebook: url("/images/footer/social/facebook.svg");
+  --instagram: url("/images/footer/social/instagram.svg");
+  --linked-in: url("/images/footer/social/linked-in.svg");
+  --twitter: url("/images/footer/social/twitter.svg");
+  --vimeo: url("/images/footer/social/vimeo.svg");
+  --blog: url("/images/my-services/blog.svg");
+  --conarch: url("/images/my-services/conarch.svg");
+  --seo: url("/images/my-services/seo.svg");
+  --down-quote: url("/images/quote/down-quote.svg");
+  --upper-quote: url("/images/quote/upper-quote.svg");
+  --fokes: url("/images/quote/fokes.png");
+  --stokes: url("/images/quote/stokes.png");
+  --check-mark: url("/images/services/check-mark.svg");
 }
 
 a {
@@ -32,6 +50,16 @@ a {
 
 li {
   list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  font-weight: inherit;
 }
 
 input {
@@ -47,53 +75,72 @@ input {
   text-transform: capitalize;
 }
 
-._active:hover {
-  box-shadow: var(--orange) 0 0 0.3125rem 0.1875rem;
-  background: var(--black);
-  text-shadow: var(--orange) 0.0625rem 0rem 1.5625rem;
-  color: var(--orange);
-  border: var(--orange);
+body {
+  margin: 0;
+  padding: 0;
 }
 
-._active:hover div {
+._active-box {
+  transform: scale(1);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.2s ease-out,
+    background 0.4s ease-out,
+    text-shadow 0.5s ease-in-out;
+}
+
+._active-box:hover {
+  box-shadow: var(--orange) 0 0 0.3125rem 0.1875rem;
+  background: var(--black);
+  text-shadow: var(--orange) 0.0625rem 0 1.5625rem;
+  color: var(--orange);
+  border: var(--orange);
+  transform: scale(0.9);
+}
+
+._active-box:hover .arrow,
+._active-box:hover .base-arrow {
   border-color: var(--orange);
 }
 
-html {
-  font-family: "Work Sans", sans-serif;
-  color: var(--white);
+._active-string {
+  transform: scale(1);
+  transition:
+    transform 0.2s ease-out,
+    color 0.3s ease-in-out,
+    text-shadow 0.5s ease-out;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12.5rem;
+._active-string:hover {
+  transform: scale(1.5);
+  color: var(--orange);
+  text-shadow: var(--black) 1px 0px 15px;
 }
 
-body {
+.main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: var(--almost-black);
-  padding: 4rem 0 5rem 0;
   margin: 0;
   color: var(--white);
-  gap: 5rem;
+  font-family: "Work Sans", sans-serif;
+  gap: 6rem;
+  padding: 4rem 0 5rem 0;
 }
 
 .text_large {
   font-family: "Lato", sans-serif;
   font-size: 56px;
   font-weight: 700;
-  line-height: 71.5px;
   text-align: center;
   margin: 0;
 }
 
 .text_normal {
   font-size: 18px;
-  line-height: 160%;
+  transition:
+    color 0.5s ease-out,
+    transform 0.4s ease-out;
 }
 
 ._flexbox {
@@ -104,8 +151,18 @@ body {
 .navigation {
   display: flex;
   white-space: nowrap;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
+  gap: 12rem;
+}
+
+.navigation__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
+  font-size: 18px;
 }
 
 .navigation__logo {
@@ -115,14 +172,10 @@ body {
 }
 
 .navigation__logo::before {
-  content: url("/css/images/logo.svg");
+  content: var(--logo);
   width: 1.75rem;
   height: 1.75rem;
   vertical-align: middle;
-}
-
-.navigation li {
-  font-size: 18px;
 }
 
 .navigation__item_selected {
@@ -130,91 +183,76 @@ body {
   text-decoration-line: underline;
 }
 
-.navigation li:hover {
-  color: var(--orange);
-  text-shadow: var(--orange) 0.0625rem 0rem 0.625rem;
-}
-
 .navigation__contact-button {
+  align-self: flex-start;
   font-size: 16px;
   padding: 0.5rem 1.25rem;
   border-radius: 0.3125rem;
-  line-height: 1.625rem;
 }
 
 .information {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   font-family: "Lato", sans-serif;
 }
 
-.information__elem1 {
-  margin-left: 8rem;
+.information__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rem;
+  max-width: 41.5rem;
 }
 
-.information h2 {
-  width: 38.875rem;
+.information__block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.information__ux-designer {
   font-size: 74px;
   font-weight: 800;
-  line-height: 140%;
   margin-bottom: 0;
 }
 
-.information p {
+.information__greeting {
   font-size: 22px;
   font-weight: 400;
-  width: 41.5rem;
-  line-height: 160%;
+  line-height: 2rem;
 }
 
-.information h2 span {
+._red {
   color: var(--red);
 }
 
 .information__button {
+  align-self: flex-start;
   padding: 1.75rem 3rem;
   font-weight: 800;
   border-radius: 0.3125rem;
   font-size: 34px;
 }
 
-.information__circle {
-  width: 40.5rem;
-  height: 40.5rem;
-  border-radius: 100%;
-  background: var(--graphite-black);
-  margin: 10rem 0 4rem;
-}
-
 .information__face {
-  width: 40rem;
-  height: 54rem;
-  background-image: url("/css/images/information/face.png");
-  background-size: 40rem 54rem;
-  margin: -8rem 0 0 3rem;
+  min-width: 44rem;
+  min-height: 55rem;
+  background: var(--face) no-repeat;
+  background-size: 100% 100%;
 }
 
 .social-links {
   display: inline-flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 5rem;
   background-color: var(--red);
   width: 100%;
   padding: 4rem 0;
-}
-
-.social-links a {
   color: var(--white);
   font-size: 40px;
   font-weight: 800;
-  line-height: 140%;
   white-space: nowrap;
-}
-
-.social-links a:hover {
-  color: var(--orange);
-  text-shadow: var(--black) 1px 0px 15px;
 }
 
 .my-services {
@@ -226,12 +264,11 @@ body {
   gap: 2.5rem;
 }
 
-.my-services h1 {
+.my-services__head {
   color: var(--red);
   text-align: center;
   font-size: 30px;
   font-weight: 600;
-  line-height: 28px;
 }
 
 .my-services__info {
@@ -240,55 +277,64 @@ body {
   justify-content: center;
   gap: 2.1875rem;
   flex-wrap: wrap;
-  margin-top: 3.125rem;
 }
 
 .my-services__block {
-  width: 18.75rem;
-  height: 16.25rem;
+  max-width: 18.75rem;
+  max-height: 16.25rem;
   padding: 2.5rem;
   background: var(--black-gray);
-}
-
-.my-services_photo-blog {
-  width: 4rem;
-  height: 4.25rem;
-  flex-shrink: 0;
-  background: url("/css/images/my-services/blog.svg") no-repeat;
-}
-
-.my-services__info h4 {
-  font-family: "Cormorant", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 0px;
-  color: var(--blackish-red);
-}
-
-.my-services__info p {
   color: var(--grayish);
 }
 
+.my-services_photo-blog {
+  min-width: 4rem;
+  min-height: 4.25rem;
+  background: var(--blog) no-repeat;
+  transition:
+    color 0.5s ease-out,
+    transform 0.4s ease-out;
+}
+
+.my-services__block-head {
+  font-family: "Cormorant", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--blackish-red);
+  margin-top: 1.5rem;
+  transition:
+    color 0.5s ease-out,
+    transform 0.4s ease-out;
+}
+
 .my-services_photo-seo {
-  width: 4rem;
+  min-width: 4rem;
   height: 4.25rem;
-  flex-shrink: 0;
-  background: url("/css/images/my-services/seo.svg");
+  background: var(--seo) no-repeat;
+  transition: transform 0.4s ease-out;
 }
 
 .my-services_photo-conarch {
-  width: 4rem;
+  min-width: 4rem;
   height: 4.25rem;
-  flex-shrink: 0;
-  background: url("/css/images/my-services/conarch.svg");
+  background: var(--conarch) no-repeat;
+  transition:
+    color 0.5s ease-out,
+    transform 0.4s ease-out;
 }
 
-.my-services_active:hover h4 {
-  color: var(--white);
+.my-services_active {
+  transform: scale(1);
+  transition:
+    color 0.5s ease-out,
+    transform 0.4s ease-out;
 }
 
-.my-services_active:hover p {
+.my-services_active:hover,
+.my-services_active:hover .my-services__block-head,
+.my-services_active:hover .text_normal {
   color: var(--white);
+  transform: scale(1.1);
 }
 
 .services {
@@ -296,18 +342,19 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 4.6875rem 0rem;
+  padding: 4.6875rem 0;
   background: var(--black-gray);
   gap: 6.25rem;
+  align-items: center;
 }
 
 .services__list {
   display: flex;
   flex-direction: column;
   counter-reset: item;
-  font-family: "Work Sans", sans-serif;
   font-size: 22px;
   font-weight: 700;
+  gap: 1rem;
 }
 
 .services__list-elem::before {
@@ -315,6 +362,7 @@ body {
   counter-increment: item;
   color: var(--blackish);
   margin-right: 1rem;
+  transition: color 0.5s ease-in-out;
 }
 
 .services__list-elem:hover::before {
@@ -322,9 +370,9 @@ body {
 }
 
 .services__block {
-  width: 36.5rem;
   display: flex;
   flex-flow: column wrap;
+  font-size: 32px;
 }
 
 .services__head {
@@ -334,11 +382,6 @@ body {
   gap: 2rem;
 }
 
-.services__block h4 {
-  font-size: 32px;
-  margin: 0 0 5rem 0.3rem;
-}
-
 .services__list-elem {
   display: inline-flex;
   align-content: center;
@@ -346,10 +389,10 @@ body {
 }
 
 .services__line {
-  width: 90%;
-  height: 2px;
+  min-width: 25.1875rem;
+  min-height: 0.125rem;
   padding-top: 0.25rem;
-  border-top: 2px solid var(--white-arrow);
+  border-top: 0.125rem solid var(--white-arrow);
 }
 
 .services__button {
@@ -378,27 +421,27 @@ body {
   border-top: 0.0938rem solid var(--white);
 }
 
-.services__list ul {
+.services__works {
   display: flex;
-  flex-wrap: nowrap;
-  margin: -3.5rem 0 0rem -1.9rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.services__list ul li::before {
-  margin: 0.3125rem 0 0 -1.875rem;
-  content: "";
-  position: absolute;
-  width: 1.125rem;
-  height: 1.125rem;
-  background: transparent url("/css/images/services/check-mark.svg") no-repeat;
+.services__works .text_normal::before {
+  content: var(--check-mark);
+  min-width: 1.125rem;
+  min-height: 1.125rem;
+  vertical-align: middle;
+  padding-right: 0.75rem;
 }
 
-.services__list ul li {
-  padding: 0 1.85rem;
+.services__works .text_normal {
   color: var(--grayish);
+  white-space: nowrap;
+  transition: color 0.2s ease-in;
 }
 
-.services__list ul li:hover {
+.services__works .text_normal:hover {
   color: var(--smoky-white);
 }
 
@@ -406,20 +449,19 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 28.875rem;
-  margin-top: 6.25rem;
+  max-width: 28.875rem;
 }
 
-.services__info h1 {
+.services__info .text_large {
   text-align: left;
 }
 
-.services__info p {
+.services__info .text_normal {
   color: var(--smoky-gray);
 }
 
 .services__info-button {
-  width: 9.5rem;
+  max-width: 9.5rem;
   padding: 1rem 2rem;
   justify-content: center;
   align-items: center;
@@ -436,15 +478,14 @@ body {
   gap: 30px;
 }
 
-.portfolio h1 {
-  width: 32.875rem;
+.portfolio .text_large {
+  max-width: 32.875rem;
 }
 
-.portfolio p {
-  width: 34.1875rem;
+.portfolio .text_normal {
+  max-width: 34.1875rem;
   color: var(--gray);
   text-align: center;
-  line-height: 180%;
 }
 
 .portfolio__photos {
@@ -454,18 +495,17 @@ body {
   width: 66%;
 }
 
-.portfolio__photos img {
-  width: 24.375rem;
-  height: 20rem;
+.portfolio__photos .examples {
+  max-width: 24.375rem;
+  max-height: 20rem;
 }
 
 .portfolio__button {
-  padding: 0.75rem 1.75rem;
+  padding: 1rem 1.75rem;
   background: var(--orange);
   text-align: center;
   font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
   text-transform: uppercase;
 }
 
@@ -477,7 +517,7 @@ body {
 }
 
 .people-say__gym {
-  width: 32.625rem;
+  max-width: 32.625rem;
   color: var(--white-gray);
   text-align: center;
 }
@@ -489,23 +529,22 @@ body {
 }
 
 .people-say__quote {
-  width: 34rem;
-  height: 7.5rem;
+  max-width: 34rem;
+  max-height: 7.5rem;
   padding: 2rem;
   margin-bottom: 7rem;
 }
 
 .people-say__quote-box {
-  padding: 2rem;
+  padding: 2.7rem;
   background:
-    url(/css/images/quote/upper-quote.svg) 0.5rem 1.25rem/ 1rem 1rem no-repeat,
-    url(/css/images/quote/down-quote.svg) 31.75rem 7.5rem/ 1rem 1rem no-repeat;
+    var(--upper-quote) 0.5rem 1.25rem/ 1rem 1rem no-repeat,
+    var(--down-quote) 31.75rem 7.5rem/ 1rem 1rem no-repeat;
   background-color: var(--black-eye);
-  width: 30.125rem;
+  max-width: 30.125rem;
   color: var(--white-dice);
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  line-height: 28px;
 }
 
 .people-say__quote-member {
@@ -513,17 +552,19 @@ body {
   gap: 1rem;
 }
 
-.people-say__quote-member div {
-  width: 6rem;
-  height: 6rem;
+.people-say__quote_fokes,
+.people-say__quote_stokes {
+  min-width: 6rem;
+  min-height: 6rem;
   border-radius: 0.6875rem;
   padding: 0.01rem;
   background-position: bottom;
   background-color: var(--black-eye);
+  background-repeat: no-repeat;
 }
 
 .people-say__quote_author {
-  width: 6.8125rem;
+  max-width: 6.8125rem;
   color: var(--white);
   font-family: "Gelasio", sans-serif;
   font-size: 20px;
@@ -531,7 +572,7 @@ body {
   margin-top: 1.4375rem;
 }
 
-.people-say__quote_author span {
+.people-say__quote_author-member {
   color: var(--white-post);
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -539,11 +580,11 @@ body {
 }
 
 .people-say__quote_stokes {
-  background: url(/css/images/quote/stokes.png) no-repeat;
+  background-image: var(--stokes);
 }
 
 .people-say__quote_fokes {
-  background: url(/css/images/quote/fokes.png) no-repeat;
+  background-image: var(--fokes);
 }
 
 .people-say__selectors {
@@ -558,6 +599,7 @@ body {
   width: 1.4rem;
   height: 0.375rem;
   border: 2px solid var(--grayish);
+  transition: border-color 0.2s ease-in-out;
 }
 
 .people-say__selector_active {
@@ -581,40 +623,37 @@ body {
   gap: 7.25rem;
 }
 
-.clients span {
+.clients__header {
   text-align: left;
   font-family: "Lato", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 100%;
 }
 
-.clients p {
-  width: 24.4375rem;
+.clients .text_normal {
+  max-width: 24.4375rem;
   color: var(--white-clients);
   font-family: "Open Sans", sans-serif;
 }
 
 .clients__img {
-  width: 9.5rem;
-  height: 4.9625rem;
+  display: flex;
+  align-items: center;
+  min-width: 9.5rem;
+  min-height: 4.9625rem;
+  background-size: 100% 100%;
 }
 
 .clients_logo-1 {
-  height: 3.9rem;
-  background: url("/css/images/clients/client-1.png") no-repeat;
-  background-size: 9.5rem 3.9rem;
+  background: var(--client-1) no-repeat center;
 }
 
 .clients_logo-2 {
-  height: 3.8rem;
-  background: url("/css/images/clients/client-2.png") no-repeat;
-  background-size: 9.5rem 3.8rem;
+  background: var(--client-2) no-repeat center;
 }
 
 .clients_logo-3 {
-  background: url("/css/images/clients/client-3.png") no-repeat;
-  background-size: 9.5rem 4.9625rem;
+  background: var(--client-3) no-repeat center;
 }
 
 .footer {
@@ -632,22 +671,17 @@ body {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  line-height: 30px;
+  font-size: 24px;
   gap: 1.5rem;
 }
 
-.footer__box p {
-  width: 24.3125rem;
+.footer__text {
+  max-width: 24.3125rem;
   font-size: 18px;
   color: var(--white-footer);
 }
 
-.footer__box h4 {
-  font-size: 24px;
-  margin: 0.625rem 0.625rem;
-}
-
-.footer__box input {
+.footer__newsletter_field {
   background-color: var(--almost-black);
   border: 1px solid var(--white-input-border);
   font-size: 22px;
@@ -656,49 +690,40 @@ body {
 
 .footer__social {
   display: inline;
-  padding: 0.6rem;
   margin: 0;
+  gap: 0.8rem;
 }
 
-.footer__social li {
+.footer__link {
   display: inline-flex;
-  list-style-type: none;
-  margin-right: 0.8rem;
-}
-
-.footer__social li a {
   width: 2.25rem;
   height: 2.25rem;
   background-size: 2.25rem 2.25rem;
 }
 
-.footer__social_facebook {
-  background: url("/css/images/footer/social/facebook.svg") no-repeat;
+._facebook {
+  background: var(--facebook) no-repeat;
 }
 
-.footer__social_twitter {
-  background: url("/css/images/footer/social/twitter.svg") no-repeat;
+._twitter {
+  background: var(--twitter) no-repeat;
 }
 
-.footer__social_instagram {
-  background: url("/css/images/footer/social/instagram.svg") no-repeat;
+._instagram {
+  background: var(--instagram) no-repeat;
 }
 
-.footer__social_linked-in {
-  background: url("/css/images/footer/social/linked-in.svg") no-repeat;
+._linked-in {
+  background: var(--linked-in) no-repeat;
 }
 
-.footer__social_vimeo {
-  background: url("/css/images/footer/social/vimeo.svg") no-repeat;
+._vimeo {
+  background: var(--vimeo) no-repeat;
 }
 
 .logo {
   width: 2.75rem;
   height: 2.75rem;
-  background: url("/css/images/logo.svg"), no-repeat;
-  background-size: 2.75rem 2.75rem;
-}
-
-._down {
-  gap: 0;
+  background: var(--logo), no-repeat;
+  background-size: 100% 100%;
 }
