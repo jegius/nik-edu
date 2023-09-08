@@ -1,7 +1,7 @@
 {
   "name": "nik-edu",
   "version": "1.0.0",
-  "dependencies": {
-    
+  "devDependencies": {
+    "prettier": "3.0.3"
   }
 }
