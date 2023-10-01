@@ -1,0 +1,42 @@
+:root {
+    --white: #FFF;
+    --orange: #f55529;
+    --red: #f50103;
+    --bg: #101010;
+    --bg-header: rgba(16, 16, 16, .5);
+    --logo-and-counter-text: #0f0d1c;
+    --home-img-circle: #1c1c1c;
+    --block-color: #181818;
+    --my-service-block-text: #5a5a5a;
+    --my-service-block-header: #1f0c0b;
+    --by-service-element: #5a5a5a;
+    --by-service-element-hover: #f4f4f4;
+    --text-color-ececec: #ececec;
+    --text-color-ebebeb: #ebebeb;
+    --text-color-d6d6d7: #d6d6d7;
+    --text-color-c9cacd: #c9cacd;
+    --text-color-f1f1f1: #f1f1f1;
+    --text-color-fefefe: #fefefe;
+    --blog-block-color: #1d2027;
+    --blog-selector-color: #989fab;
+    --blog-selector-active-color: #df2020;
+    --clients-bg: #1d2027;
+    --border-color-email-input: #e2e2e2;
+
+    --logo: url('/images/logo.svg');
+    --home-face: url('/images/home/face.png');
+    --my-services-blog-img: url('/images/services/my-services/blog.svg');
+    --my-services-seo-img: url('/images/services/my-services/seo.svg');
+    --my-services-con-arch-img: url('/images/services/my-services/conarch.svg');
+    --by-services-arrow-img: url('/images/services/by-services/by-services-button.svg');
+    --by-services-check-mark-img: url('/images/services/by-services/check-mark.svg');
+    --blog-quite-down-quote: url('/images/blog/down-quote.svg');
+    --blog-quite-upper-quote: url('/images/blog/upper-quote.svg');
+    --blog-author-stokes: url('/images/blog/stokes.png');
+    --blog-author-fokes: url('/images/blog/fokes.png');
+    --facebook: url('/images/contact/footer/facebook.svg');
+    --twitter: url('/images/contact/footer/twitter.svg');
+    --instagram: url('/images/contact/footer/instagram.svg');
+    --linked-in: url('/images/contact/footer/linked-in.svg');
+    --vimeo: url('/images/contact/footer/vimeo.svg');
+}
