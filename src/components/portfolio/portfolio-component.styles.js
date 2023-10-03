@@ -3,7 +3,7 @@ export default `
         @import url('../common.css');
 
         ul {
-            margin; 0;
+            margin: 0;
             padding: 0;
             list-style: none;
         }
@@ -12,7 +12,8 @@ export default `
             display: flex;
             flex-wrap: wrap;
             max-width: 73.125rem;
-            overflow: hidden;
+            justify-content: center;
+            align-items: center;
         }
 
     </style>

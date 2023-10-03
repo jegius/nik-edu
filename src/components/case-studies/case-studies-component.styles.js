@@ -4,8 +4,9 @@ export default `
 
         .case-studies {
             display: flex;
-            flex-direction: column;
+            flex-flow: column wrap;
             align-items: center;
+            justify-content: center;
             gap: 4.1875rem;
         }
         

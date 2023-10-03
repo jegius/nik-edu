@@ -8,7 +8,7 @@ export default `
             justify-content: center;
             flex-wrap: wrap;
             background-color: var(--clients-bg);
-            width: 100vw;
+            max-width: 100vw;
             padding: 4.25rem 0;
             gap: 4.375rem
         }

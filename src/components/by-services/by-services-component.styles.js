@@ -6,9 +6,10 @@ export default `
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             padding: 6.625rem 0;
             background-color: var(--block-color);
-            width: 100vw;
+            max-width: 100vw;
             gap: 7.5rem;
         }
         

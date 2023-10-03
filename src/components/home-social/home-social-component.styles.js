@@ -12,10 +12,9 @@ export default `
             display: inline-flex;
             justify-content: center;
             flex-wrap: wrap;
-            width: 100vw;
+            max-width: 100vw;
             background-color: var(--red);
-            padding: 4.125rem 0;
-            overflow-x: hidden;
+            padding: 4.125rem 5rem;
             justify-content: center;
             gap: 7.8125rem;
         }

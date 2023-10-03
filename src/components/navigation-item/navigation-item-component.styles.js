@@ -20,7 +20,8 @@ export default `
         text-shadow: 0 0 0;
         cursor: pointer;
         line-height: 2.25rem;
-        transition: font-size .3s ease-in-out,
+        transform: scale(1);
+        transition: transform .3s ease-in-out,
             box-shadow .3s ease-out,
             color .1s ease;
     }
@@ -28,7 +29,7 @@ export default `
     .navigation__item:hover {
         text-shadow: 0 0 .4rem var(--orange);
         color: var(--orange);
-        font-size: 36px;
+        transform: scale(1.2);
     }
 
     .navigation__item_active {

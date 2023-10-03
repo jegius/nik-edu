@@ -6,7 +6,7 @@ export default `
             display: flex;
             justify-content: center;
             align-content: center;
-            flex-direction: wrap;
+            flex-wrap: wrap;
             gap: 1.875rem;
             margin-top: 3.375rem;
             margin-bottom: 10rem;
