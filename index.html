@@ -1,321 +1,417 @@
 <!doctype html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <title>Title</title>
-        <link
-            rel="stylesheet"
-            href="./css/main.css" />
-        <script
-            src="./js/index.js"
-            defer></script>
+        <link rel="stylesheet"
+              href="./css/main.css" />
+        <script src="./js/index.js"
+                defer></script>
     </head>
-    <body class="main">
-        <header class="navigation">
-            <div class="navigation__logo">Warkinon</div>
-            <ul class="navigation__links">
-                <li class="_active-string navigation__item_selected">
-                    <a href="#">Home</a>
+
+    <body>
+        <header
+                class="navigation text_work-sans text_size_18 text_medium text_white">
+            <div class="navigation__logo">
+                <div class="icon_header icon_logo"></div>
+                <span class="logo__text text_size_24">warkinon</span>
+            </div>
+            <ul class="navigation__list">
+                <li class="navigation__item navigation__item_active"><a
+                       href="">home</a>
                 </li>
-                <li class="_active-string">
-                    <a href="#">Case Studies</a>
-                </li>
-                <li class="_active-string"><a href="#">Blog</a></li>
-                <li class="_active-string"><a href="#">Services</a></li>
-                <li class="_active-string"><a href="#">Contact</a></li>
+                <li class="navigation__item"><a href="#">case studies</a></li>
+                <li class="navigation__item"><a href="#">blog</a></li>
+                <li class="navigation__item"><a href="#">services</a></li>
+                <li class="navigation__item"><a href="#">contact</a></li>
             </ul>
-            <input
-                class="navigation__contact-button _active-box"
-                type="button"
-                value="contact" />
+            <input class="button button_size_s button_red text_work-sans text_size_16"
+                   type="button"
+                   value="contact">
         </header>
-        <section class="information">
-            <div class="information__block">
-                <div class="information__text">
-                    <h2 class="information__ux-designer">
-                        I am
-                        <span class="information__ux-designer _red">
-                            William
-                        </span>
-                        a UX Designer from the Bronx
-                    </h2>
-                    <p class="information__greeting">
-                        Hi, my name is Alex Smith and I love creating unique
-                        intefaces using code. Pixel perfect every time just try
-                        me out.
-                    </p>
-                    <input
-                        class="information__button _active-box"
-                        type="button"
-                        value="- my works" />
-                </div>
-                <div class="information__face"></div>
-            </div>
-            <ul class="social-links">
-                <li class="_active-string">
-                    <a href="#">Facebook</a>
-                </li>
-                <li class="_active-string"><a href="#">Twitter</a></li>
-                <li class="_active-string">
-                    <a href="#">Google Plus</a>
-                </li>
-                <li class="_active-string">
-                    <a href="#">Linkedin</a>
-                </li>
-            </ul>
-        </section>
-        <section class="my-services">
-            <h1 class="my-services__head">My Services</h1>
-            <h2 class="text_large">Why hire me for your next project</h2>
-            <div class="my-services__info">
-                <div class="my-services__block my-services_active">
-                    <div class="my-services_photo-blog"></div>
-                    <h4 class="my-services__block-head">Blog article</h4>
-                    <p class="text_normal">
-                        Mauris vel quam nunc. Quisque tempor tempus aliquet.
-                        Donec egestas odio et tempor.
-                    </p>
-                </div>
-                <div class="my-services__block my-services_active">
-                    <div class="my-services_photo-seo"></div>
-                    <h4 class="my-services__block-head">SEO strategy</h4>
-                    <p class="text_normal">
-                        Mauris vel quam nunc. Quisque tempor tempus aliquet.
-                        Donec egestas odio et tempor.
-                    </p>
-                </div>
-                <div class="my-services__block my-services_active">
-                    <div class="my-services_photo-conarch"></div>
-                    <h4 class="my-services__block-head">
-                        Content architecture
-                    </h4>
-                    <p class="text_normal">
-                        Mauris vel quam nunc. Quisque tempor tempus aliquet.
-                        Donec egestas odio et tempor.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="services">
-            <ol class="services__list">
-                <li class="services__list-elem">
-                    <div class="services__block">
-                        <div class="services__head">
-                            <div class="services__line"></div>
-                            <div class="services__button _active-box">
-                                <div class="arrow"></div>
-                                <div class="base-arrow"></div>
-                            </div>
-                        </div>
-                        <h4>UI/UX Design</h4>
-                        <ul class="services__works">
-                            <li class="text_normal">Web Design</li>
-                            <li class="text_normal">App Design</li>
-                            <li class="text_normal">Dashboard Design</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="services__list-elem">
-                    <div class="services__block">
-                        <div class="services__head">
-                            <div class="services__line"></div>
-                            <div class="services__button _active-box">
-                                <div class="arrow"></div>
-                                <div class="base-arrow"></div>
-                            </div>
-                        </div>
-                        <h4>Development</h4>
-                        <ul class="services__works">
-                            <li class="text_normal">Web Development</li>
-                            <li class="text_normal">App Development</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="services__list-elem">
-                    <div class="services__block">
-                        <div class="services__head">
-                            <div class="services__line"></div>
-                            <div class="services__button _active-box">
-                                <div class="arrow"></div>
-                                <div class="base-arrow"></div>
-                            </div>
-                        </div>
-                        <h4>Branding</h4>
-                        <ul class="services__works">
-                            <li class="text_normal">Brand Logo</li>
-                            <li class="text_normal">Brand Promotion</li>
-                        </ul>
-                    </div>
-                </li>
-            </ol>
-            <div class="services__info">
-                <h1 class="text_large">Solving problems by the services</h1>
-                <p class="text_normal">
-                    I seek to push the limits of creativity to create
-                    high-engaging, user-friendly, and memorable interactive
-                    experiences.
-                </p>
-                <input
-                    class="services__info-button _active-box"
-                    type="button"
-                    value="Learn more →" />
-            </div>
-        </section>
-        <section class="portfolio">
-            <h1 class="text_large">Let's have a look at my porfolio</h1>
-            <p class="text_normal">
-                I seek to push the limits of creativity to create high-engaging,
-                user-friendly, and memorable interactive experiences.
-            </p>
-            <div class="portfolio__photos">
-                <a href="#">
-                    <img
-                        class="examples"
-                        loading="lazy"
-                        src="/images/portfolio/work-1.png" />
-                </a>
-                <a href="#">
-                    <img
-                        class="examples"
-                        loading="lazy"
-                        src="/images/portfolio/work-2.png" />
-                </a>
-                <a href="#">
-                    <img
-                        class="examples"
-                        loading="lazy"
-                        src="/images/portfolio/work-3.png" />
-                </a>
-                <a href="#">
-                    <img
-                        class="examples"
-                        loading="lazy"
-                        src="/images/portfolio/work-4.png" />
-                </a>
-                <a href="#">
-                    <img
-                        class="examples"
-                        loading="lazy"
-                        src="/images/portfolio/work-5.png" />
-                </a>
-                <a href="#">
-                    <img
-                        class="examples"
-                        loading="lazy"
-                        src="/images/portfolio/work-6.png" />
-                </a>
-            </div>
-            <input
-                class="portfolio__button _active-box"
-                type="button"
-                value="view more" />
-        </section>
-        <section class="people-say">
-            <h1 class="text_large">What People Say</h1>
-            <p class="text_normal people-say__gym">
-                Welcome to our gym & fitness training centre. Sore today, strong
-                tomorrow. Improve your fitness today.
-            </p>
-            <div class="people-say__quoteblock">
-                <div class="people-say__quote">
-                    <p class="people-say__quote-box">
-                        I have been taking gym and fitness training here since a
-                        long time and I found here so much easy, comfort and
-                        flexibility. The mentors are so good and they train me
-                        very well.
-                    </p>
-                    <div class="people-say__quote-member">
-                        <div class="people-say__quote_stokes"></div>
-                        <span class="people-say__quote_author">
-                            Ben Stokes
-                            <span class="people-say__quote_author-member">
-                                member
-                            </span>
-                        </span>
-                    </div>
-                </div>
-                <div class="people-say__quote">
-                    <p class="people-say__quote-box">
-                        I have been taking gym and fitness training here since a
-                        long time and I found here so much easy, comfort and
-                        flexibility. The mentors are so good and they train me
-                        very well.
-                    </p>
-                    <div class="people-say__quote-member">
-                        <div class="people-say__quote_fokes"></div>
-                        <p class="people-say__quote_author">
-                            Ben Fokes
-                            <span class="people-say__quote_author-member">
-                                member
-                            </span>
+        <main class="site">
+            <section class="home">
+                <div class="home__base">
+                    <div class="home__info">
+                        <h1 class="header_size_74 text_lato text_extrabold">I am
+                            <span class="text_red">William</span> a UX Designer
+                            from
+                            the Bronx
+                        </h1>
+                        <p class="text_size_22 text_lato text_regular">Hi, my
+                            name
+                            is Alex Smith and I love creating unique interfaces
+                            using code. Pixel perfect every time just try me
+                            out.
                         </p>
+                        <input type="button"
+                               class="button button_size_l button_red text_lato text_extrabold text_size_34"
+                               value="- my works">
+                    </div>
+                    <div class="home__img">
+                        <div class="home__img-circle">
+                            <div class="home__img-face"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="people-say__selectors">
-                <div
-                    class="people-say__selector people-say__selector_active"></div>
-                <div class="people-say__selector"></div>
-                <div class="people-say__selector"></div>
-            </div>
-        </section>
-        <section class="clients">
-            <div class="_flexbox">
-                <span class="clients__header">Our Trusted Client</span>
-                <p class="text_normal">
-                    Proin eget tortor risus cras ultricies ligula sed portavamus
-                    suscipit tortor
-                </p>
-            </div>
-            <div class="clients__img clients_logo-1"></div>
-            <div class="clients__img clients_logo-2"></div>
-            <div class="clients__img clients_logo-3"></div>
-        </section>
-        <section class="footer">
-            <div class="footer__box">
-                <div class="logo"></div>
-                <p class="footer__text">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffere
-                </p>
-            </div>
-            <div class="footer__box">
-                <h4 class="footer__newsletter">Newsletter</h4>
-                <input
-                    class="footer__newsletter_field"
-                    type="email"
-                    placeholder="Submit your email...." />
-            </div>
-            <div class="footer__box">
-                <h4>Follow Me</h4>
-                <ul class="footer__social">
-                    <li class="footer__link">
-                        <a
-                            href="#"
-                            class="footer__link _facebook"></a>
+                <ul
+                    class="home__social header_size_40 text_lato text_extrabold">
+                    <li class="home__social-item">
+                        <a href="#">facebook</a>
                     </li>
-                    <li class="footer__link">
-                        <a
-                            href="#"
-                            class="footer__link _twitter"></a>
+                    <li class="home__social-item">
+                        <a href="#">twitter</a>
                     </li>
-                    <li class="footer__link">
-                        <a
-                            href="#"
-                            class="footer__link _instagram"></a>
+                    <li class="home__social-item">
+                        <a href="#">google plus</a>
                     </li>
-                    <li class="footer__link">
-                        <a
-                            href="#"
-                            class="footer__link _linked-in"></a>
-                    </li>
-                    <li class="footer__link">
-                        <a
-                            href="#"
-                            class="footer__link _vimeo"></a>
+                    <li class="home__social-item">
+                        <a href="#">linkedin</a>
                     </li>
                 </ul>
-            </div>
-        </section>
+            </section>
+            <section class="services">
+                <div class="my-services">
+                    <h1
+                        class="text_work-sans text_size_30 text_semibold text_red">
+                        My Services </h1>
+                    <h2 class="text_lato header_size_56 text_bold">Why hire me
+                        for
+                        your next project</h2>
+                    <div class="my-services__blocks">
+                        <div class="my-services__block">
+                            <div class="icon_large icon_blog">
+                            </div>
+                            <h1
+                                class="my-services__block-header text_cormorant header_size_36 text_bold">
+                                Blog articles </h1>
+                            <p
+                               class="my-services__block-text text_work-sans text_size_18 text_regular">
+                                Mauris vel quam nunc. Quisque tempor tempus
+                                aliquet.
+                                Donec egestas odio et tempor.</p>
+                        </div>
+                        <div class="my-services__block">
+                            <div class="icon_large icon_seo">
+                            </div>
+                            <h1
+                                class="my-services__block-header text_cormorant header_size_36 text_bold">
+                                SEO strategy</h1>
+                            <p
+                               class="my-services__block-text text_work-sans text_size_18 text_regular">
+                                Mauris vel quam nunc. Quisque tempor tempus
+                                aliquet.
+                                Donec egestas odio et tempor.</p>
+                        </div>
+                        <div class="my-services__block">
+                            <div class="icon_large icon_con-arch">
+                            </div>
+                            <h1
+                                class="my-services__block-header text_cormorant header_size_36 text_bold">
+                                Content architecture</h1>
+                            <p
+                               class="my-services__block-text text_work-sans text_size_18 text_regular">
+                                Mauris vel quam nunc. Quisque tempor tempus
+                                aliquet.
+                                Donec egestas odio et tempor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="by-services">
+                    <ol class="by-services__list">
+                        <li
+                            class="by-services__item text_work-sans text_size_22 text_bold">
+                            <div class="by-services__nowrap-item">
+                                <h1
+                                    class="by-services__item-header text_size_32">
+                                    UI/UX Design</h1>
+                                <div
+                                     class="button by-services__item-button button_orange">
+                                    <svg width="44"
+                                         height="44"
+                                         viewBox="0 0 44 44"
+                                         fill="none">
+                                        <path d="M18 18H26M26 18V26M26 18L18 26"
+                                              stroke="currentColor"
+                                              stroke-width="1.5">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul
+                                class="by-services__item-list text_size_18 text_regular">
+                                <li class="by-services__item-element">web design
+                                </li>
+                                <li class="by-services__item-element">app design
+                                </li>
+                                <li class="by-services__item-element">dashboard
+                                    design</li>
+                            </ul>
+                        </li>
+                        <li
+                            class="by-services__item text_work-sans text_size_22 text_bold">
+                            <div class="by-services__nowrap-item">
+                                <h1
+                                    class="by-services__item-header text_size_32">
+                                    Development</h1>
+                                <div
+                                     class="button by-services__item-button button_orange">
+                                    <svg width="44"
+                                         height="44"
+                                         viewBox="0 0 44 44"
+                                         fill="none">
+                                        <path d="M18 18H26M26 18V26M26 18L18 26"
+                                              stroke="currentColor"
+                                              stroke-width="1.5">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul
+                                class="by-services__item-list text_size_18 text_regular">
+                                <li class="by-services__item-element">web
+                                    development</li>
+                                <li class="by-services__item-element">app
+                                    development</li>
+                            </ul>
+                        </li>
+                        <li
+                            class="by-services__item text_work-sans text_size_22 text_bold">
+                            <div class="by-services__nowrap-item">
+                                <h1
+                                    class="by-services__item-header text_size_32">
+                                    Branding</h1>
+                                <div
+                                     class="button by-services__item-button button_orange">
+                                    <svg width="44"
+                                         height="44"
+                                         viewBox="0 0 44 44"
+                                         fill="none">
+                                        <path d="M18 18H26M26 18V26M26 18L18 26"
+                                              stroke="currentColor"
+                                              stroke-width="1.5">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul
+                                class="by-services__item-list text_size_18 text_regular">
+                                <li class="by-services__item-element">brand logo
+                                </li>
+                                <li class="by-services__item-element">brand
+                                    promotion</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <div class="by-services__info">
+                        <h1 class="text_lato header_size_56 text_bold">Solving
+                            problems by the services</h1>
+                        <p
+                           class="text_work-sans text_size_18 text_regular text_line_height text_color_ececec">
+                            I seek to push the limits of creativity to create
+                            high-engaging, user-friendly, and memorable
+                            interactive
+                            experiences.</p>
+                        <label
+                               class="by-services__info-button button button_size_m button_orange">
+                            <input class="by-services__info-button text_work-sans text_size_14"
+                                   type="button"
+                                   value="learn more">
+                            <svg width="24"
+                                 height="6"
+                                 viewBox="0 0 24 6"
+                                 fill="none">
+                                <path d="M24 3L19 0.113249V5.88675L24 3ZM0 3.5H19.5V2.5H0V3.5Z"
+                                      fill="currentColor" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="case-studies">
+                <div class="section__header">
+                    <h1 class="text_lato header_size_56 text_bold">Let’s a have
+                        a
+                        look at my portfolio</h1>
+                    <p
+                       class="text_work-sans text_size_18 text_regular text_color_ebebeb text_line_height">
+                        I seek to push the limits of creativity to create
+                        high-engaging, user-friendly, and memorable interactive
+                        experiences.</p>
+                </div>
+                <ul class="case-studies__portfolio">
+                    <li class="case-studies__portfolio-item"><a href="#"><img
+                                 class="img_full_in_place"
+                                 src="/images/case-studies/work-1.png"
+                                 alt=""
+                                 loading="lazy"></a></li>
+                    <li class="case-studies__portfolio-item"><a href="#"><img
+                                 class="img_full_in_place"
+                                 src="/images/case-studies/work-2.png"
+                                 alt=""
+                                 loading="lazy"></a></li>
+                    <li class="case-studies__portfolio-item"><a href="#"><img
+                                 class="img_full_in_place"
+                                 src="/images/case-studies/work-3.png"
+                                 alt=""
+                                 loading="lazy"></a></li>
+                    <li class="case-studies__portfolio-item"><a href="#"><img
+                                 class="img_full_in_place"
+                                 src="/images/case-studies/work-4.png"
+                                 alt=""
+                                 loading="lazy"></a></li>
+                    <li class="case-studies__portfolio-item"><a href="#"><img
+                                 class="img_full_in_place"
+                                 src="/images/case-studies/work-5.png"
+                                 alt=""
+                                 loading="lazy"></a></li>
+                    <li class="case-studies__portfolio-item"><a href="#"><img
+                                 class="img_full_in_place"
+                                 src="/images/case-studies/work-6.png"
+                                 alt=""
+                                 loading="lazy"></a></li>
+                </ul>
+                <input type="button"
+                       class="button button_size_m button_orange"
+                       value="view more">
+            </section>
+            <section class="blog">
+                <div class="section__header">
+                    <h1 class="text_lato header_size_56 text_bold">What Prople
+                        Say
+                    </h1>
+                    <p
+                       class="text_work-sans text_size_18 text_regular text_color_ebebeb text_line_height">
+                        Welcome to our gym & fitness training centre. Sore
+                        today,
+                        strong tomorrow. Improve your fitness today.</p>
+                </div>
+                <div class="blog__block-list">
+                    <div class="blog__block">
+                        <div class="blog__rectangle">
+                            <p
+                               class="text_inter text_size_16 text_regular text_line_height">
+                                I have been taking gym and fitness training here
+                                since a long time and I found here so much easy,
+                                comfort and flexibility. The mentors are so good
+                                and
+                                they train me very well.</p>
+                        </div>
+                        <div class="blog__author">
+                            <div class="blog__author-img stokes">
+                            </div>
+                            <div class="blog__author-info">
+                                <h4
+                                    class="text_gelacio text_size_20 text_semibold">
+                                    ben stokes</h4>
+                                <span
+                                      class="text_inter text_size_14 text_regular text_color_c9cacd">member</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__block">
+                        <div class="blog__rectangle">
+                            <p
+                               class="text_inter text_size_16 text_regular text_line_height">
+                                I have been taking gym and fitness training here
+                                since a long time and I found here so much easy,
+                                comfort and flexibility. The mentors are so good
+                                and
+                                they train me very well.</p>
+                        </div>
+                        <div class="blog__author">
+                            <div class="blog__author-img fokes"></div>
+                            <div class="blog__author-info">
+                                <h4
+                                    class="text_gelacio text_size_20 text_semibold">
+                                    ben fokes</h4>
+                                <span
+                                      class="text_inter text_size_14 text_regular text_color_c9cacd">member</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog__selector">
+                    <div class="blog__option option_active"></div>
+                    <div class="blog__option"></div>
+                    <div class="blog__option"></div>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="contact__clients">
+                    <div class="clients__info">
+                        <h4 class="text_lato text_size_30 text_bold">Our Trusted
+                            Clients</h4>
+                        <p
+                           class="text_open-sans text_size_18 text_light text_color_f1f1f1 text_line_height">
+                            Proin eget tortor risus cras ultricies ligula sed
+                            portavamus suscipit tortor</p>
+                    </div>
+                    <ul class="clients__list">
+                        <li class="client"><a href="#"><img
+                                     src="/images/contact/clients/client-1.png"
+                                     alt=""
+                                     class="img_full_in_place"></a></li>
+                        <li class="client"><a href="#"><img
+                                     src="/images/contact/clients/client-2.png"
+                                     alt=""
+                                     class="img_full_in_place"></a></li>
+                        <li class="client"><a href="#"><img
+                                     src="/images/contact/clients/client-3.png"
+                                     alt=""
+                                     class="img_full_in_place"></a></li>
+                    </ul>
+                </div>
+                <div class="contact__footer text_open-sans text_light">
+                    <div class="footer__info">
+                        <div class="icon_logo icon_medium"></div>
+                        <p
+                           class="text_size_18 text_line_height text_color_fefefe">
+                            There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffere </p>
+                    </div>
+                    <div class="footer__email">
+                        <h4 class="text_size_24"> Newsletter </h4>
+                        <input type="email"
+                               class="footer__email-input text_open-sans text_size_22 text_light"
+                               placeholder="Submit your email....">
+                    </div>
+                    <div class="footer__social">
+                        <h4 class="text_size_24">Follow Me</h4>
+                        <ul class="footer__social-links">
+                            <li>
+                                <a href="#">
+                                    <div class="icon_small icon_facebook"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon_small icon_twitter"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon_small icon_instagram">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon_small icon_linked-in">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon_small icon_vimeo"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
+
 </html>
