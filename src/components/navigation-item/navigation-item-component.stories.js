@@ -8,12 +8,38 @@ import "../common.css";
 export default {
     title: "NavigationItemComponent",
     tags: ['autodocs'],
+    argTypes: {
+        itemText: { control: 'text' },
+        href: { control: 'text' },
+        isActive: {
+            control: { type:'select' },
+            options: ['true', 'false']
+        },
+    }
 };
 
-const Template = () => {
+const Template = (args) => {
     return html`
-    <navigation-item-component></navigation-item-component>
+    <navigation-item-component
+        text=${args.itemText}
+        is-active=${args.isActive}
+        href=${args.href}
+    ></navigation-item-component>
     `
 };
 
 export const Default = Template.bind({});
+
+Default.args = {
+    isActive: "false",
+    itemText: "item text",
+    href: "#",
+}
+
+export const Active = Template.bind({});
+
+Active.args = {
+    itemText: "active text",
+    isActive: "true",
+    href: "#",
+}
