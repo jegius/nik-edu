@@ -11,7 +11,7 @@ export class NavigationItemComponent extends HTMLElement {
         return "navigation-item-component";
     }
     #href;
-    #item;
+    #link;
 
     #ATTRIBUTES_MAPPING = new Map([
         [navItemAttributes.ITEM_TEXT, NavigationItemComponent.#setText],
@@ -47,19 +47,19 @@ export class NavigationItemComponent extends HTMLElement {
     }
 
     #selectAndCallExist(callback, value) {
-        if (this.#item) {
-            callback.call(this, this.#item, value)
+        if (this.#link) {
+            callback.call(this, this.#link, value)
         }
     }
 
     static #setText(element, newText) {
-        element.firstChild.innerHTML = newText;
+        element.innerHTML = newText;
     }
 
     static #setHref(element, newHref) {
         this.#href = newHref;
         if (element) {
-            element.firstChild.setAttribute("href", newHref);
+            element.setAttribute("href", newHref);
         }
     }
 
@@ -78,6 +78,6 @@ export class NavigationItemComponent extends HTMLElement {
         templateElem.innerHTML = template;
 
         this.shadowRoot.appendChild(templateElem.content.cloneNode(true));
-        this.#item = this.shadowRoot.querySelector('.navigation__item');
+        this.#link = this.shadowRoot.querySelector('.navigation-item__link');
     }
 }
