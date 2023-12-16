@@ -1,8 +1,7 @@
 import { ButtonComponent } from '../src/components/button/button-component.js';
-import { LinkComponent } from '../src/components/link-component/link-component.js';
+import { LinkComponent } from '../src/components/link/link-component.js';
 import { LogoHeaderComponent } from '../src/components/logo-header/logo-header-component.js';
 import { HeaderComponent } from '../src/components/header/header-component.js';
-import { NavigationListComponent } from '../src/components/navigation-list/navigation-list-component.js';
 import { TextHeaderComponent } from '../src/components/text-header/text-header-component.js';
 import { TextComponent } from '../src/components/text/text-component.js';
 import { HomeFaceComponent } from '../src/components/home-face/home-face-component.js';
@@ -83,7 +82,7 @@ const preview = {
   IconComponent,
   LogoHeaderComponent,
   HeaderComponent,
-  NavigationListComponent,
+  NavigationComponent,
   TextHeaderComponent,
   BlockHeaderComponent,
   TextComponent,

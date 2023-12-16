@@ -1,22 +1,28 @@
-import template from "./navigation-item-component.template.js";
+import template from "./link-component.template.js";
+import events from "../api/events.js";
+import { addListeners, removeListeners, select } from "../api/helpers.js";
 
-const navItemAttributes = {
-    ITEM_TEXT: "text",
+const linkAttributes = {
+    LINK_TEXT: "text",
     IS_ACTIVE: "is-active",
     HREF: "href",
-}
+};
 
-export class NavigationItemComponent extends HTMLElement {
+export class LinkComponent extends HTMLElement {
     static get name() {
-        return "navigation-item-component";
+        return "link-component";
     }
     #href;
     #link;
 
+    #listeners = [
+        [select.bind(this, ".link"), "click", this.#addEventListeners.bind(this)],
+    ];
+
     #ATTRIBUTES_MAPPING = new Map([
-        [navItemAttributes.ITEM_TEXT, NavigationItemComponent.#setText],
-        [navItemAttributes.IS_ACTIVE, NavigationItemComponent.#setActive],
-        [navItemAttributes.HREF, NavigationItemComponent.#setHref],
+        [linkAttributes.LINK_TEXT, LinkComponent.#setText],
+        [linkAttributes.IS_ACTIVE, LinkComponent.#setActive],
+        [linkAttributes.HREF, LinkComponent.#setHref],
     ]);
 
     constructor() {
@@ -25,11 +31,12 @@ export class NavigationItemComponent extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return Object.values(navItemAttributes)
+        return Object.values(linkAttributes)
     }
 
     connectedCallback() {
         this.#render();
+        this.#listeners.forEach(addListeners.bind(this));
 
         for (let attrName of this.constructor.observedAttributes) {
             if (this.hasAttribute(attrName)) {
@@ -39,14 +46,18 @@ export class NavigationItemComponent extends HTMLElement {
         }
     }
 
+    disconnectedCallback() {
+        this.#listeners.forEach(removeListeners);
+    }
+
     attributeChangedCallback(name, oldValue, newValue) {
         if (newValue !== oldValue) {
             const callback = this.#ATTRIBUTES_MAPPING.get(name);
-            this.#selectAndCallExist(callback, newValue);
+            this.#selectAndCallIfExist(callback, newValue);
         }
     }
 
-    #selectAndCallExist(callback, value) {
+    #selectAndCallIfExist(callback, value) {
         if (this.#link) {
             callback.call(this, this.#link, value)
         }
@@ -63,7 +74,6 @@ export class NavigationItemComponent extends HTMLElement {
         }
     }
 
-
     static #setActive(element, newAttr) {
         const isActive = newAttr === "true";
         if (isActive) {
@@ -73,11 +83,24 @@ export class NavigationItemComponent extends HTMLElement {
         }
     }
 
+    #addEventListeners(event) {
+        const element = this.#href !== "#" ? document.querySelector(this.#href) : null;
+        
+        if (element) {
+            event.preventDefault();
+            element.scrollIntoView({ behavior: "smooth" });
+        };
+
+        this.dispatchEvent(
+            new CustomEvent(events.LINK_CLICKED, { bubbles: true, detail: this })
+        );
+    }
+
     #render() {
         const templateElem = document.createElement("template");
         templateElem.innerHTML = template;
 
         this.shadowRoot.appendChild(templateElem.content.cloneNode(true));
-        this.#link = this.shadowRoot.querySelector('.navigation-item__link');
+        this.#link = this.shadowRoot.querySelector('.link');
     }
 }
