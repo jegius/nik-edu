@@ -1,11 +1,13 @@
-import template from "./link-component.template.js";
+import generateTemplate from "./link-component.template.js";
 import events from "../api/events.js";
+import { cleanNodes } from "../api/helpers.js"
 import { addListeners, removeListeners, select } from "../api/helpers.js";
 
 const linkAttributes = {
     LINK_TEXT: "text",
     IS_ACTIVE: "is-active",
     HREF: "href",
+    STYLES: "styles",
 };
 
 export class LinkComponent extends HTMLElement {
@@ -13,6 +15,9 @@ export class LinkComponent extends HTMLElement {
         return "link-component";
     }
     #href;
+    #text;
+    #styles;
+    #active;
     #link;
 
     #listeners = [
@@ -20,9 +25,10 @@ export class LinkComponent extends HTMLElement {
     ];
 
     #ATTRIBUTES_MAPPING = new Map([
-        [linkAttributes.LINK_TEXT, LinkComponent.#setText],
-        [linkAttributes.IS_ACTIVE, LinkComponent.#setActive],
-        [linkAttributes.HREF, LinkComponent.#setHref],
+        [linkAttributes.LINK_TEXT, this.#setText.bind(this)],
+        [linkAttributes.IS_ACTIVE, this.#setActive.bind(this)],
+        [linkAttributes.HREF, this.#setHref.bind(this)],
+        [linkAttributes.STYLES, this.#setStyle.bind(this)],
     ]);
 
     constructor() {
@@ -36,7 +42,6 @@ export class LinkComponent extends HTMLElement {
 
     connectedCallback() {
         this.#render();
-        this.#listeners.forEach(addListeners.bind(this));
 
         for (let attrName of this.constructor.observedAttributes) {
             if (this.hasAttribute(attrName)) {
@@ -56,36 +61,43 @@ export class LinkComponent extends HTMLElement {
             this.#selectAndCallIfExist(callback, newValue);
         }
     }
-
+    
     #selectAndCallIfExist(callback, value) {
         if (this.#link) {
-            callback.call(this, this.#link, value)
+            callback.call(this, this.#link, value);
         }
     }
 
-    static #setText(element, newText) {
-        element.innerHTML = newText;
+    #setText(_, newText) {
+        this.#text = newText;
+        this.#render();
     }
 
-    static #setHref(element, newHref) {
+    #setHref(element, newHref) {
         this.#href = newHref;
         if (element) {
-            element.setAttribute("href", newHref);
+            element.setAttribute("href", newHref)
         }
     }
 
-    static #setActive(element, newAttr) {
-        const isActive = newAttr === "true";
-        if (isActive) {
-            element.classList.add("_active");
+    #setActive(_, newActive) {
+        if (newActive === "true") {
+            this.#active = "_active";
         } else {
-            element.classList.remove("_active");
+            this.#active = ""
         }
+        this.#render(); 
     }
+    
+    #setStyle(_, newStyle) {
+        this.#styles = newStyle;
+        this.#render(); 
+    }
+    
 
     #addEventListeners(event) {
         const element = this.#href !== "#" ? document.querySelector(this.#href) : null;
-        
+
         if (element) {
             event.preventDefault();
             element.scrollIntoView({ behavior: "smooth" });
@@ -96,11 +108,17 @@ export class LinkComponent extends HTMLElement {
         );
     }
 
-    #render() {
+    #render(
+        text = this.#text,
+        href = this.#href,
+        styles = this.#styles,
+        active = this.#active
+    ) {
+        this.#listeners.forEach(addListeners.bind(this));
         const templateElem = document.createElement("template");
-        templateElem.innerHTML = template;
+        templateElem.innerHTML = generateTemplate(text, href, styles, active);
 
-        this.shadowRoot.appendChild(templateElem.content.cloneNode(true));
-        this.#link = this.shadowRoot.querySelector('.link');
+        cleanNodes(this.shadowRoot).appendChild(templateElem.content.cloneNode(true));
+        this.#link = this.shadowRoot.querySelector(".link");
     }
 }

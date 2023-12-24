@@ -12,12 +12,16 @@ export default {
     tags: ['autodocs'],
     argTypes: {
         onClick: { action: "clicked" },
-        Text: { control: 'text' },
+        linkText: { control: 'text' },
         href: { control: 'text' },
         isActive: {
             control: { type:'select' },
             options: ['true', 'false']
         },
+        styles: {
+            control: { type:'select' },
+            options: ['nav', 'social']
+        }
     }
 };
 
@@ -28,6 +32,7 @@ const Template = (args) => {
         text=${args.linkText}
         is-active=${args.isActive}
         href=${args.href}
+        styles=${args.styles}
     ></link-component>
     `
 };
@@ -37,9 +42,14 @@ const TemplateWithScroll = (args) => html`
         @import url(../common.css);
 
         .section {
-            height: 50rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20rem;
             border: .125rem dashed white;
             margin-top: 1rem;
+            font-size: 144px;
+            color: red;
         }
 
         .section:nth-child(odd) {
@@ -58,9 +68,10 @@ const TemplateWithScroll = (args) => html`
             is-active=${args.isActive}
             text=${args.linkText}
             href=${args.href}
+            styles=${args.styles}
         ></link-component>
         <div class="section"></div>
-        <div class="section" id="test"></div>
+        <div class="section" id="test"><p>TEST</p></div>
     </div>
 `;
 
@@ -70,20 +81,22 @@ Default.args = {
     isActive: "false",
     linkText: "item text",
     href: "#",
+    styles: "nav",
 }
 
 export const Active = Template.bind({});
 
 Active.args = {
+    ...Default.args,
     linkText: "active text",
     isActive: "true",
-    href: "#",
 }
 
 export const WithScroll = TemplateWithScroll.bind({});
 
 WithScroll.args = {
     isActive: "false",
-    text: "test",
+    linkText: "test",
     href: "#test",
+    styles: "nav",
 }
