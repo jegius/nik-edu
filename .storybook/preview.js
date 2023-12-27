@@ -49,6 +49,7 @@ import { FooterEmailComponent } from '../src/components/footer-email/footer-emai
 import { FooterInfoComponent } from '../src/components/footer-info/footer-info-component.js';
 import { FooterComponent } from '../src/components/footer/footer-component.js';
 import { ContactComponent } from '../src/components/contact/contact-component.js';
+import { NavigationComponent } from '../src/components/navigation/navigation-component.js';
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {
